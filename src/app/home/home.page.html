@@ -1,5 +1,11 @@
 <ion-header class="ion-padding ion-no-border">
-  <ion-button expand="block">Block</ion-button>
+  <ion-button 
+  expand="block"
+  (click) = 'counterUp()'
+  [disabled]="numero==MAXIMO"
+  >
+  <ion-icon name="caret-up-outline"></ion-icon>
+</ion-button>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -10,5 +16,10 @@
 </ion-content>
 
 <ion-footer class="ion-padding ion-no-border">
-  <ion-button expand="block">Block</ion-button>
+  <ion-button expand="block" 
+  (click) = 'counterDown()'
+  [disabled]="numero==MINIMO"
+  >
+  <ion-icon name="caret-down-outline"></ion-icon>
+  </ion-button>
 </ion-footer>
